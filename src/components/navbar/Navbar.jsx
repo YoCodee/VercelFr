@@ -48,12 +48,23 @@ const Navbar = () => {
           <img src="/menu.png" alt="Menu Icon" onClick={() => setOpen(prev => !prev)} />
         </div>
         <div className={open ? "menu active" : "menu"}>
-          <a href="/">Home</a>
-          <a href="/">About</a>
-          <a href="/">Contact</a>
-          <a href="/">Agents</a>
-          <a href="/">Sign in</a>
-          <a href="/">Sign Up</a>
+          <Link to="/"><a>Home</a></Link>
+          <Link to="/"><a>About</a></Link>
+          <Link to="/"><a>Package</a></Link>
+          <Link to="/"><a>Galery</a></Link>
+          {user ? (
+            <div className='bg-cyan-500 p-2 rounded-md text-black'>
+              <Link to="/profile" className='profile'>
+              <span>{user.name}</span>
+              </Link>
+            </div>
+          ): (
+            <>
+               <a href="/">Sign in</a>
+               <a href="/">Sign Up</a>
+            </>
+          )}
+       
         </div>
       </div>
     </nav>

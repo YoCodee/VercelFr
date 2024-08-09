@@ -8,12 +8,21 @@ import { useNavigate } from 'react-router-dom'
 import { getMe } from '../../Features/authSlice'
 import { Link } from 'react-router-dom'
 import { useLoaderData } from 'react-router-dom'
+
 const HomePage = () => {
   const { postResponse } = useLoaderData();
-
+  const [open, setOpen] = useState(false);
   const [location, setLocation] = useState('');
   const [date, setDate] = useState('');
   const navigate = useNavigate();
+
+  useEffect(() => {
+    if (open) {
+      document.body.classList.add('body');
+    } else {
+      document.body.classList.remove('body');
+    }
+  }, [open]);
 
   const handleSearch = () => {
     navigate(`/list?location=${location}&date=${date}`);
@@ -46,53 +55,83 @@ const HomePage = () => {
   }, []);
   console.log(postResponse);
   const {user} = useSelector((state) => state.auth);
+  console.log(user)
 
   return (
     <>
     <div className='homePage flex  h-screen  pl-[3%]'>
     <div className="textContainer flex-[3] ">
 
-        <div className="wrapper pr-24 flex flex-col  gap-12 h-full">
+        <div className="wrapper mdpr-24 flex flex-col  gap-12 h-full">
           <div className="flex flex-col justify-between h-[48%] ">
-          <div className="left flex mt-5 items-center justify-between ">
+          <div className="left flex mt-5  justify-between ">
+     
             <a href="" className="Logo">
-                 <img className=" hidden lg:flex w-24 h-24" src="/Untitled design (7).png" alt=""/>
+                 <img className="  lg:flex w-24 h-24" src="/Untitled design (7).png" alt=""/>
             </a>
-            <div className="flex mb-5 mt-10 md:mt-0 justify-betweend gap-14 md:gap-8 xl:gap-16 pr-28">
+            <div className="flex mb-5 mt-10 md:mt-10 justify-betweend gap-4 md:gap-8 xl:gap-16  md:pr-28">
         
-            <a href="#destinasi" className="text-lg xl:text-xl">Destinasi</a>
-            <a href="#about" className="text-lg xl:text-xl">About</a>
-            <a href="#package" className="text-lg xl:text-xl">Package</a>
-            <a href="#galery" className="text-lg xl:text-xl">Galery</a>
+            <a href="#destinasi" className="hidden sm:block text-lg xl:text-xl">Destinasi</a>
+            <a href="#about" className="hidden sm:block text-lg xl:text-xl">About</a>
+            <a href="#package" className="hidden sm:block text-lg xl:text-xl">Package</a>
+            <a href="#galery" className="hidden sm:block text-lg xl:text-xl">Galery</a>
 
 
 
+ 
           </div>
+          <div className="mt-7 ">
+          <div className={open ? "menuIcon active z-50" : "menuIcon block sm:hidden  z-50"}>
+          <img src="/menu.png" className='w-10 z-50 h-10 cursor-pointer' alt="Menu Icon" onClick={() => setOpen(prev => !prev)} />
+        </div>
+        <div className={open ? "menu active z-10  bg-black flex flex-col text-white absolute w-[50%] text-xl justify-center items-center gap-24 right-0 bottom-0 top-0 h-screen overflow-hidden" : "menus bg-black flex-col absolute top-0 right-[-90%] h-full text-white w-[50%] flex transition-all ease-in-out justify-center items-center text-xl z-10"}>
+        <div className={open ? "menuIcon active z-50" : "menuIcon z-50"}>
+          <img src="/menu.png" className='w-10 z-50 h-10 cursor-pointer' alt="Menu Icon" onClick={() => setOpen(prev => !prev)} />
+        </div>
+          <a href="/" className='cursor-pointer'>Home</a>
+          <a href="/" className='cursor-pointer'>About</a>
+          <a href="/" className='cursor-pointer'>Contact</a>
+          <a href="/" className='cursor-pointer'>Agents</a>
+          {user ? (
+            <div className='bg-cyan-500 p-2 rounded-md text-black'>
+              <Link to="/profile" className='profile'>
+              <span className='text-xl font-bold'> {user.name}</span>
+              </Link>
+            </div>
+          ) : (
+            <>
+            <a href="/" className='cursor-pointer'>Sign in</a>
+            <a href="/" className='cursor-pointer'>Sign Up</a>
+            </>
+          )}
+         
+        </div>
+        </div>
           </div>
           <div className="">
 
-            <h1 className='title text-6xl max-w-xl font-extrabold font-serif' >Nikmati Liburan Impian Anda</h1>
-            <p className="max-w-3xl mt-6">Bangka Belitung Memiliki banyak Wisata Liburan yang belum anda temukan dimanapun.Kami menjamin anda akan menikmati perjalanan kalian.Nikmati Perjalananmu Bersama kami.</p>
+            <h1 className='title text-3xl md:text-6xl max-w-80 md:max-w-xl font-extrabold font-serif' >Nikmati Liburan Impian Anda</h1>
+            <p className="max-w-80 md:max-w-3xl mt-6">Bangka Belitung Memiliki banyak Wisata Liburan yang belum anda temukan dimanapun.Kami menjamin anda akan menikmati perjalanan kalian.Nikmati Perjalananmu Bersama kami.</p>
           </div>
           </div>
             <div className="boxes w-[80%] flex justify-between">
                 <div className="box">
                     <h1 className="text-4xl font-extrabold text-cyan-600">10+</h1>
-                    <h2 className="text-2xl">Tahun Pengalaman</h2>
+                    <h2 className="text-lg md:text-2xl">Tahun Pengalaman</h2>
                 </div>
                 <div className="box ">
                     <h1 className="text-4xl font-extrabold text-cyan-600">40</h1>
-                    <h2 className="text-2xl">Penghargaan Diperoleh</h2>
+                    <h2 className="md:text-2xl">Penghargaan Diperoleh</h2>
             
                 </div>
                 <div className="box ">
                     <h1 className="text-4xl font-extrabold text-cyan-600">50+</h1>
-                    <h2 className="text-2xl">Lokasi</h2>
+                    <h2 className="md:text-2xl">Lokasi</h2>
                 </div>
             </div>
             <div className="searchBar  w-full">
               <div className="wrapper flex   w-[85%] px-6 py-4 shadow-[0_4px_8px_0_rgba(0,0,0,0.2),0_6px_20px_0_rgba(0,0,0,0.19)] gap-20">
-                <div className="left w-[60%] border-r-2  flex  md:gap-10 ">
+                <div className="left w-[17%] md:w-[60%] border-r-2  flex  md:gap-10 ">
                   <div className="logo justify-center flex items-center ">
                     <i className="fa-solid fa-search fa-lg text-blue-400" ></i>
                   </div>
@@ -120,14 +159,14 @@ const HomePage = () => {
                     
                     <h1>Tanggal</h1>
                   </div>
-                  <div className="logo p-4 rounded-full bg-cyan-600 " onClick={handleSearch}>
+                  <div className="logo max-h-max max-w-max p-2 flex items-center l rounded-full bg-cyan-600 " onClick={handleSearch}>
                     <img className="" src="/search.png" alt=""/>
                   </div>
                 </div>
 
               </div>
             </div>
-            <div className="TextContainer">
+            <div className="TextContainer max-w-80 md:max-w-3xl">
               <h1 className="text-xl font-bold">Popular Search : <span className="text-cyan-600">Pulau lengkuas, Puri Tri Agung, Danau Kaolin</span></h1>
             </div>
         </div>
@@ -150,7 +189,7 @@ const HomePage = () => {
         <a href="/register" className="text-xl px-8 py-6 bg-cyan-500 font-bold">Register</a>
         </>
        )}
-      
+     
       
     </div>
   </div>
@@ -193,7 +232,7 @@ const HomePage = () => {
 </div>
 
 {/* Explore Destination */}
-<div class="heroSection  " id="destinasi">
+<div class="heroSection p-3  " id="destinasi">
   <div class="Wrapper mt-20">
     <h1 class="text-5xl font-bold text-center">Explore Destination</h1>
 
@@ -322,14 +361,14 @@ const HomePage = () => {
 
 
 </div>
-<div class="last  p-12">
+<div class="last p-4  md:p-12">
   <div class="wrapper w-full h-full bg-cyan-600 rounded-[3rem] p-12 items-center flex flex-col">
       <div class="title  text-center">
-        <h1 class="text-5xl font-bold font-serif text-white">Bepergian dan nikmati menjelajahi </h1>
-        <span class="text-5xl font-bold font-serif text-white">Bangka Belitung</span>
+        <h1 class="text-2xl sm:text-5xl font-bold font-serif text-white">Bepergian dan nikmati menjelajahi </h1>
+        <span class="text-2xl sm:text-5xl font-bold font-serif text-white">Bangka Belitung</span>
       </div>
       <div class="body">
-        <h1 class="text-xl font-semibold text-white my-4">Kami punya banyak destinasi wisata yang kami sediakan untuk kamu</h1>
+        <h1 class="text-md text-center sm:text-xl font-semibold text-white my-4">Kami punya banyak destinasi wisata yang kami sediakan untuk kamu</h1>
       </div>
       <Link to= "/List">
       <button class="text-cyan-700 bg-white hover:bg-cyan-800 hover:text-white focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-6 py-2.5 text-center mr-2 mb-2"> Mulai</button>

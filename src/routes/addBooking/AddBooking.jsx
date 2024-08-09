@@ -135,17 +135,17 @@ function AddBooking() {
                 <section className="section pt-48 px-3 flex flex-col justify-center">
                     <div className="grid grid-cols-2 gap-10 max-w-7xl mx-auto">
                         <div className="dalem -mt-32 flex justify-end relative">
-                            <img className="w-2/3 h-2/3 object-cover rounded-lg overflow-hidden" src="/public/37877254.jpg" />
+                            <img className="w-2/3 h-2/3 object-cover rounded-lg overflow-hidden" src="/37877254.jpg" />
                             <h1 className='absolute text-3xl font-bold xl:translate-x-72 2xl:translate-x-96 translate-y-1'>Buat Destinasi Nyaman <span>Bersama</span> Kami</h1>
                         </div>
                         <div className="flex justify-start">
-                            <img className="rounded-lg object-cover overflow-hidden" src="/public/DJI_0707_1200-2.jpg" />
+                            <img className="rounded-lg object-cover overflow-hidden" src="/DJI_0707_1200-2.jpg" />
                         </div>
                         <div className="-mt-32 flex justify-start">
-                            <img className="rounded-lg object-cover overflow-hidden" src="/public/943a2b33-65db-4171-bf76-76f52d18fa25.jpg" />
+                            <img className="rounded-lg object-cover overflow-hidden" src="/943a2b33-65db-4171-bf76-76f52d18fa25.jpg" />
                         </div>
                         <div className="flex justify-start -mr-28 ml-28">
-                            <img className="w-2/3 h-2/3 object-cover rounded-lg overflow-hidden" src="/public/Tour-Bangka-Belitung-terbaik.jpg" />
+                            <img className="w-2/3 h-2/3 object-cover rounded-lg overflow-hidden" src="/Tour-Bangka-Belitung-terbaik.jpg" />
                         </div>
                         <div className="-translate-y-[22rem] transform ml-28 -mr-28 p-8 shadow-xl rounded-xl overflow-hidden bg-white">
                             <div className="space-y-4">
