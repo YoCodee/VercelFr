@@ -56,7 +56,7 @@ const HomePage = () => {
           <div className="flex flex-col justify-between h-[48%] ">
           <div className="left flex mt-5 items-center justify-between ">
             <a href="" className="Logo">
-                 <img className=" hidden lg:flex w-24 h-24" src="/public/Untitled design (7).png" alt=""/>
+                 <img className=" hidden lg:flex w-24 h-24" src="/Untitled design (7).png" alt=""/>
             </a>
             <div className="flex mb-5 mt-10 md:mt-0 justify-betweend gap-14 md:gap-8 xl:gap-16 pr-28">
         
@@ -121,7 +121,7 @@ const HomePage = () => {
                     <h1>Tanggal</h1>
                   </div>
                   <div className="logo p-4 rounded-full bg-cyan-600 " onClick={handleSearch}>
-                    <img className="" src="/public/search.png" alt=""/>
+                    <img className="" src="/search.png" alt=""/>
                   </div>
                 </div>
 
@@ -154,11 +154,11 @@ const HomePage = () => {
       
     </div>
   </div>
-      <img className="  lg:w-[900px] xl:w-[1000px] absolute lg:left-[-36%] bottom-0" src="/public/Untitled design (6).png" alt="" />
+      <img className="  lg:w-[900px] xl:w-[1000px] absolute lg:left-[-36%] bottom-0" src="/Untitled design (6).png" alt="" />
       <div className="absolute text-black right-44 -bottom-8">
         <div className="box bg-white p-2 rounded-xl shadow-[0_4px_8px_0_rgba(0,0,0,0.2),0_6px_20px_0_rgba(0,0,0,0.19)]">
           <div className="imgContainer w-[250px] rounded-xl">
-            <img className="w-full h-full rounded-xl" src="/public/16781256423_41fcef3f9b_b.jpg" alt=""/>
+            <img className="w-full h-full rounded-xl" src="/16781256423_41fcef3f9b_b.jpg" alt=""/>
           </div>
           <div className="textContainer">
             <h1 className="text-xl font-semibold mt-4">Pulau lengkuas</h1>
@@ -291,28 +291,28 @@ const HomePage = () => {
  <div class="grid grid-cols-6 col-span-2   gap-2  ">
    <div class=" overflow-hidden rounded-xl col-span-3 max-h-[30rem]">
      <img class="h-full w-full object-cover "
-          src="/public/943a2b33-65db-4171-bf76-76f52d18fa25.jpg"
+          src="/943a2b33-65db-4171-bf76-76f52d18fa25.jpg"
           alt=""/>
    </div>
    <div class=" overflow-hidden rounded-xl col-span-3 max-h-[30rem]">
      <img class="h-full w-full object-cover  "
-          src="/public/Jelajah-Wisata-Bangka-Location-Gurun-Pelawan-Desa-Namang-1080x834.jpg"
+          src="/Jelajah-Wisata-Bangka-Location-Gurun-Pelawan-Desa-Namang-1080x834.jpg"
           alt=""/>
    </div>
    <div class=" overflow-hidden rounded-xl col-span-2 max-h-[14rem]">
      <img class="h-full w-full object-cover "
-          src="/public/Daftar-Tempat-Wisata-Paling-Hits-Di-Bangka-Belitung-Pantai-Tongaci.jpg"
+          src="/Daftar-Tempat-Wisata-Paling-Hits-Di-Bangka-Belitung-Pantai-Tongaci.jpg"
           alt=""/>
    </div>
    <div class=" overflow-hidden rounded-xl col-span-2 max-h-[14rem]">
      <img class="h-full w-full object-cover "
-          src="/public/Puri Tri agung.jpg"
+          src="/Puri Tri agung.jpg"
           alt=""/>
    </div>
    <div class="relative overflow-hidden rounded-xl col-span-2 max-h-[14rem]">
      
      <img class="h-full w-full object-cover "
-          src="/public/50589194_2559360307414242_999548555661013824_n.jpg"
+          src="/50589194_2559360307414242_999548555661013824_n.jpg"
           alt=""/>
    </div>
  </div>
