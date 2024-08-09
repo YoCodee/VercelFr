@@ -1,0 +1,143 @@
+export const listData = [
+    {
+        id: 1,
+        title : "A Great Apartement Next to the Beach!",
+        img : "https://images.pexels.com/photos/26100664/pexels-photo-26100664/free-photo-of-a-young-male-deer.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+        bedRooms : 2,
+        bathRooms : 2,
+        price : 20000,
+        address : "Pangkalpinang Jl Air Mawaar",
+        latitude : -2.1210716956660582, 
+        longtitude : 106.11150148649355,
+    },
+    {
+        id: 2,
+        title : "A Great asd Next to the Beach!",
+        img : "https://images.pexels.com/photos/26100664/pexels-photo-26100664/free-photo-of-a-young-male-deer.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+        bedRooms : 2,
+        bathRooms : 2,
+        price : 20000,
+        address : "Pangkalpinang Jl Air Mawaar",
+        latitude : 51.23334,
+        longtitude : -1.3332,
+    },
+    {
+        id: 3,
+        title : "A RE Apartement Next to the Beach!",
+        img : "https://images.pexels.com/photos/26100664/pexels-photo-26100664/free-photo-of-a-young-male-deer.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+        bedRooms : 2,
+        bathRooms : 2,
+        price : 20000,
+        address : "Pangkalpinang Jl Air Mawaar",
+        latitude : 61.23334,
+        longtitude : 5.3332,
+    },
+    {
+        id: 4,
+        title : "A Great Apartement Next to the Beach!",
+        img : "https://images.pexels.com/photos/26100664/pexels-photo-26100664/free-photo-of-a-young-male-deer.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+        bedRooms : 2,
+        bathRooms : 2,
+        price : 20000,
+        address : "Pangkalpinang Jl Air Mawaar",
+        latitude : 51.23334,
+        longtitude : -0.3332,
+    },
+    {
+        id: 5,
+        title : "A Great Apartement Next to the Beach!",
+        img : "https://images.pexels.com/photos/26100664/pexels-photo-26100664/free-photo-of-a-young-male-deer.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+        bedRooms : 2,
+        bathRooms : 2,
+        price : 20000,
+        address : "Pangkalpinang Jl Air Mawaar",
+        latitude : 51.23334,
+        longtitude : -0.3332,
+    },
+    {
+        id: 6,
+        title : "A Great Apartement Next to the Beach!",
+        img : "https://images.pexels.com/photos/26100664/pexels-photo-26100664/free-photo-of-a-young-male-deer.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+        bedRooms : 2,
+        bathRooms : 2,
+        price : 20000,
+        address : "Pangkalpinang Jl Air Mawaar",
+        latitude : 51.23334,
+        longtitude : -0.3332,
+    },
+]
+
+export const singlePostData = {
+    id: 1,
+    title: "Beautiful apartement",
+    price:12345,
+    images: [
+        "https://images.pexels.com/photos/26100664/pexels-photo-26100664/free-photo-of-a-young-male-deer.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+        "https://images.pexels.com/photos/158229/lost-places-pforphoto-leave-factory-158229.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+        "https://images.pexels.com/photos/26100664/pexels-photo-26100664/free-photo-of-a-young-male-deer.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+        "https://images.pexels.com/photos/26100664/pexels-photo-26100664/free-photo-of-a-young-male-deer.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+    ],
+    bedRooms : 2,
+    bathRooms : 2,
+    city: "London",
+    address : "Pangkalpinang Jl Air Mawaar",
+    latitude : 51.23334,
+    longtitude : -0.3332,
+    size:421,
+    school: "234 away",
+    bus : "100m",
+    restaurant : "300m",
+    descrption :  "Future Alike Hill pull picture with Future Alike Hill pull picture with swin magician seedFuture Alike Hill pull picture with swin magician seedFuture Alike Hill pull picture with swin magician seedFuture Alike Hill pull picture with swin magician seedFuture Alike Hill pull picture with swin magician seedFuture Alike Hill pull picture with swin magician seed swin magician seed"
+}
+
+export const userData = {
+    id:1,
+    name : "John Doe",
+    img:"https://images.pexels.com/photos/26100664/pexels-photo-26100664/free-photo-of-a-young-male-deer.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+}
+
+export const PostData = [
+    {
+        id: 1,
+        title : "Bangka Botanical Garden",
+        img : "Jelajah-Wisata-Bangka-Location-Gurun-Pelawan-Desa-Namang-1080x834.jpg",
+        address : "Pangkalpinang Jl Air Mawaar",
+        price : 200000,
+    },
+    {
+        id: 2,
+        title : "Pantai Tongachi",
+        img : "the-nusantara-pagoda-in-the-hills-of-rebo-bangka-regency-bangka-belitung-islands-2jpt5kw.jpg",
+        address : "Pangkalpinang Jl Air Mawaar",
+        price : 200000,
+    },
+    {
+        id: 3,
+        title : "Pantai Tongachi",
+        img : "the-nusantara-pagoda-in-the-hills-of-rebo-bangka-regency-bangka-belitung-islands-2jpt5kw.jpg",
+        address : "Pangkalpinang Jl Air Mawaar",
+        price : 200000,
+    },
+    {
+        id: 4,
+        title : "Pantai Tongachi",
+        img : "the-nusantara-pagoda-in-the-hills-of-rebo-bangka-regency-bangka-belitung-islands-2jpt5kw.jpg",
+        address : "Pangkalpinang Jl Air Mawaar",
+        price : 200000,
+    },
+    {
+        id: 5,
+        title : "Pantai Tongachi",
+        img : "the-nusantara-pagoda-in-the-hills-of-rebo-bangka-regency-bangka-belitung-islands-2jpt5kw.jpg",
+        address : "Pangkalpinang Jl Air Mawaar",
+        price : 200000,
+    },
+    {
+        id: 6,
+        title : "Pantai Tongachi",
+        img : "the-nusantara-pagoda-in-the-hills-of-rebo-bangka-regency-bangka-belitung-islands-2jpt5kw.jpg",
+        address : "Pangkalpinang Jl Air Mawaar",
+        price : 200000,
+    },
+]
+

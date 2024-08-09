@@ -1,0 +1,115 @@
+@import "../../responsive.scss";
+
+.wrapper1 {
+    overflow-x: hidden;
+    position: relative;
+}
+
+.title1{
+    position: absolute;
+    top: 3em;
+    left: 10vw;
+
+  
+
+    
+    h1{
+        font-size: 4rem;
+      
+        
+    }
+}
+
+.svg {
+    position: absolute;
+    top: 11em;
+    left: 10vw;
+    width: 50vw;
+
+   
+
+    
+}
+@include md{
+    .svg{
+        top: 8em;
+    }
+}
+
+.mask {
+    width: 0%;
+}
+
+.container {
+    display: flex;
+    width: 300vw;
+
+   
+    
+
+    
+}
+
+.scroll-section-outer {
+    overflow: hidden;
+  }
+  
+  .scroll-section-inner {
+    height: 100vh;
+    width: 300vw;
+    display: flex;
+    flex-direction: row;
+    position: relative;
+  }
+  
+  .scroll-section {
+ 
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    section {
+        
+    
+        width: 100vw;
+        padding: 20vw 10vw;
+
+        h1 {
+            font-size: 4rem;
+            margin: 0;
+        }
+
+        p {
+            font-size: 1.2rem;
+            width: 50vw;
+        }
+        .col {
+            display: flex;
+            gap: 3em;
+            
+            
+            p {
+                font-size: 1.2rem;
+            }
+        }
+
+        ul {
+            list-style-type: none;
+            display: flex;
+            gap: 3em;
+            width: 100%;
+            height: 300px;
+            padding: 0;
+
+
+            li {
+                background: white;
+                border-radius: .3em;
+                flex-grow: 1;
+            }
+        }
+
+    }
+  }

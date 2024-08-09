@@ -1,0 +1,123 @@
+@import "../../responsive.scss";
+
+.profilPage{
+    display: flex;
+    height: 100%;
+
+    @include md{
+        flex-direction: column;
+        overflow: scroll;
+    }
+
+    .details{
+        flex: 3;
+       overflow-y: auto;
+       padding-bottom: 50px;
+
+       @include md{
+       flex: none;
+       height: max-content;
+    }
+
+
+        .wrapper{
+            padding-right: 50px;
+            display: flex;
+            flex-direction: column;
+            gap: 50px;
+
+            .title{
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+
+               
+
+                button{
+                    padding: 12px 24px;
+                    background-color: #fece51;
+                    border: none;
+                }
+            }
+
+            .info{
+                display: flex;
+                flex-direction: column;
+        
+
+                span{
+                    display: flex;
+                    align-items: center;
+                    gap: 20px;
+                }
+
+                button{
+                    width: 100px;
+                    background-color: teal;
+                    border: none;
+                    padding: 10px 20px;
+                    cursor: pointer;
+                }
+
+                img{
+                    width: 40px;
+                    height: 40px;
+                    border-radius: 50%;
+                    object-fit: cover;
+                }
+            }
+        }
+    }
+
+    .chatContainer{
+        flex: 2;
+        background-color: #fcf5f3;
+        height: 100%;
+        .section{
+            .grid{
+                .dalem{
+                    h1{
+                        color: #18272F;
+                        font-weight: 700;
+                        font-size: 2rem;
+                    }
+                    span{
+                        text-decoration: none;
+                        color: #18272F;
+                        font-weight: 700;
+                      position: relative;
+                    }
+                    
+                    span::before {
+                      content: '';
+                      background-color: hsla(196, 61%, 58%, .75);
+                      position: absolute;
+                      left: 0;
+                      bottom: 3px;
+                      width: 100%;
+                      height: 8px;
+                      z-index: -1;
+                      transition: all .3s ease-in-out;
+                    }
+                    
+                    span:hover::before {
+                      bottom: 0;
+                      height: 100%;
+                    }
+                }
+            }
+        }
+        
+        
+
+        @include sm{
+            flex: none;
+            height: max-content;
+         }
+
+        .wrapper{
+            padding: 0px 20px;
+            height: 100%;
+        }
+    }
+}
