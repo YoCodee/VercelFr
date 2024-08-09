@@ -59,12 +59,12 @@ const HomePage = () => {
 
   return (
     <>
-    <div className='homePage flex  h-screen  pl-[3%]'>
+    <div className='homePage flex  h-screen overflow-x-hidden  pl-[3%]'>
     <div className="textContainer flex-[3] ">
 
         <div className="wrapper mdpr-24 flex flex-col  gap-12 h-full">
           <div className="flex flex-col justify-between h-[48%] ">
-          <div className="left flex mt-5  justify-between ">
+          <div className="left flex mt-5 gap-32 md:justify-between ">
      
             <a href="" className="Logo">
                  <img className="  lg:flex w-24 h-24" src="/Untitled design (7).png" alt=""/>
@@ -80,14 +80,12 @@ const HomePage = () => {
 
  
           </div>
-          <div className="mt-7 ">
-          <div className={open ? "menuIcon active z-50" : "menuIcon block sm:hidden  z-50"}>
+          <div className="mt-7 flex  ">
+          <div className={open ? "menuIcon active z-50" : "menuIcon  sm:hidden flex    z-50"}>
           <img src="/menu.png" className='w-10 z-50 h-10 cursor-pointer' alt="Menu Icon" onClick={() => setOpen(prev => !prev)} />
         </div>
         <div className={open ? "menu active z-10  bg-black flex flex-col text-white absolute w-[50%] text-xl justify-center items-center gap-24 right-0 bottom-0 top-0 h-screen overflow-hidden" : "menus bg-black flex-col absolute top-0 right-[-90%] h-full text-white w-[50%] flex transition-all ease-in-out justify-center items-center text-xl z-10"}>
-        <div className={open ? "menuIcon active z-50" : "menuIcon z-50"}>
-          <img src="/menu.png" className='w-10 z-50 h-10 cursor-pointer' alt="Menu Icon" onClick={() => setOpen(prev => !prev)} />
-        </div>
+
           <a href="/" className='cursor-pointer'>Home</a>
           <a href="/" className='cursor-pointer'>About</a>
           <a href="/" className='cursor-pointer'>Contact</a>
