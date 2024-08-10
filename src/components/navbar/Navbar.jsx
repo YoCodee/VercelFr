@@ -19,16 +19,16 @@ const Navbar = () => {
   }, [open]);
 
   return (
-    <nav>
+    <nav className='overflow-x-hidden overflow-y-hidden'>
       <div className="left">
         <a href="/" className='logo'>
           <img src="/Untitled design (7).png" alt="Logo" />
     
         </a>
-        <a href="/">Home</a>
-        <a href="/">About</a>
-        <a href="/">Package</a>
-        <a href="/">Galety</a>
+        <a href="/#destinasi">Home</a>
+        <a href="/#about">About</a>
+        <a href="/#package">Package</a>
+        <a href="/#galery">Galery</a>
       </div>
       <div className="right">
        { user ? (
@@ -48,10 +48,10 @@ const Navbar = () => {
           <img src="/menu.png" alt="Menu Icon" onClick={() => setOpen(prev => !prev)} />
         </div>
         <div className={open ? "menu active" : "menu"}>
-          <Link to="/"><a>Home</a></Link>
-          <Link to="/"><a>About</a></Link>
-          <Link to="/"><a>Package</a></Link>
-          <Link to="/"><a>Galery</a></Link>
+          <Link to="/"><a onClick={() => setOpen(false)}>Home</a></Link>
+          <Link to="/"><a onClick={() => setOpen(false)}>About</a></Link>
+          <Link to="/"><a onClick={() => setOpen(false)}>Package</a></Link>
+          <Link to="/"><a onClick={() => setOpen(false)}>Galery</a></Link>
           {user ? (
             <div className='bg-cyan-500 p-2 rounded-md text-black'>
               <Link to="/profile" className='profile'>
@@ -60,8 +60,8 @@ const Navbar = () => {
             </div>
           ): (
             <>
-               <a href="/">Sign in</a>
-               <a href="/">Sign Up</a>
+       <Link to="/login">  <a className='cursor-pointer'>Sign in</a></Link>
+       <Link to="/register"><a className='cursor-pointer'>Sign Up</a></Link>
             </>
           )}
        

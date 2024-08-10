@@ -67,7 +67,7 @@ const ProfilPage = () => {
     return (
         <>
             <Navbar />
-            <div className='profilPage pl-8'>
+            <div className='profilPage pl-8 '>
                 <div className="details">
                     <div className="wrapper">
                         <div className="">
@@ -81,11 +81,11 @@ const ProfilPage = () => {
                             </div>
                         </div>
                         <div className="title">
-                            <h1 className='text-3xl font-bold'>Booking</h1>
+                            <h1 className='pr-4 text-3xl font-bold'>Booking</h1>
                             {user && user.role === "admin" && (
                                 <div className="flex gap-5">
                                     <Link to="/add">
-                                    <button>Create New Post</button>
+                                    <button>Create</button>
                                     </Link>
                                     <Link to="/BookingTable">
                                     <button>Bookings</button>
@@ -117,7 +117,7 @@ const ProfilPage = () => {
                         )}
                     </div>
                 </div>
-                <div className="chatContainer">
+                <div className="chatContainer hidden md:flex">
                     <section className="section pt-48 px-3 flex flex-col justify-center">
                         <div className="grid grid-cols-2 gap-10 max-w-6xl mx-auto">
                             <div className="dalem -mt-32 flex justify-end relative">

@@ -46,12 +46,12 @@ const SinglePage = () => {
                   <div className="price">Rp {data.price.toLocaleString('id-ID')}</div>
                 </div>
                 <div className="user">
-                  {data.user && data.user.name && (
+
                     <>
-                      <img src="/Admin-Profile-PNG-Clipart.png" alt={data.user.name} />
-                      <span className='text-black'>{data.user.name}</span>
+                      <img src="/Admin-Profile-PNG-Clipart.png"  />
+                      <span className='text-black'>Admin</span>
                     </>
-                  )}
+          
                 </div>
               </div>
               <div className="bottom"  dangerouslySetInnerHTML={{

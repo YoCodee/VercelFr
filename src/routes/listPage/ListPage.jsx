@@ -56,8 +56,10 @@ const ListPage = () => {
   const validPosts = transformedPosts.filter(post => post.lat !== undefined && post.lng !== undefined);
 
   return (
+    <>
+    
     <div className="App">
-      <Navbar />
+    <Navbar />
       <div className="listPage pl-4">
         <div className="listContainer">
           <div className="wrapper">
@@ -79,6 +81,7 @@ const ListPage = () => {
     
       </div>
     </div>
+    </>
   );
 };
 

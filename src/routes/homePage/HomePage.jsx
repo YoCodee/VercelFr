@@ -64,10 +64,10 @@ const HomePage = () => {
 
         <div className="wrapper mdpr-24 flex flex-col  gap-12 h-full">
           <div className="flex flex-col justify-between h-[48%] ">
-          <div className="left flex mt-5 gap-32 md:justify-between ">
+          <div className="left flex mt-5 gap-12 xl:gap-32 justify-between ">
      
             <a href="" className="Logo">
-                 <img className="  lg:flex w-24 h-24" src="/Untitled design (7).png" alt=""/>
+                 <img className="  flex w-28 gap-4" src="/Untitled design (7).png" alt=""/>
             </a>
             <div className="flex mb-5 mt-10 md:mt-10 justify-betweend gap-4 md:gap-8 xl:gap-16  md:pr-28">
         
@@ -84,12 +84,12 @@ const HomePage = () => {
           <div className={open ? "menuIcon active z-50" : "menuIcon  sm:hidden flex    z-50"}>
           <img src="/menu.png" className='w-10 z-50 h-10 cursor-pointer' alt="Menu Icon" onClick={() => setOpen(prev => !prev)} />
         </div>
-        <div className={open ? "menu active z-10  bg-black flex flex-col text-white absolute w-[50%] text-xl justify-center items-center gap-24 right-0 bottom-0 top-0 h-screen overflow-hidden" : "menus bg-black flex-col absolute top-0 right-[-90%] h-full text-white w-[50%] hidden  transition-all ease-in-out justify-center items-center text-xl z-10"}>
+        <div className={open ? "menu active z-10  bg-black flex flex-col text-white absolute transition-all w-[100%] text-xl justify-center items-center gap-24 right-0 bottom-0 top-0 h-screen overflow-hidden" : "menus bg-black flex-col absolute top-0 right-[-90%] h-full text-white w-[50%] hidden  transition-all ease-in-out justify-center items-center text-xl z-10"}>
        
-          <a href="/" className='cursor-pointer'>Home</a>
-          <a href="/" className='cursor-pointer'>About</a>
-          <a href="/" className='cursor-pointer'>Contact</a>
-          <a href="/" className='cursor-pointer'>Agents</a>
+          <a href="#destinasi" onClick={() => setOpen(false)} className='cursor-pointer'>Destinasi</a>
+          <a href="#about" onClick={() => setOpen(false)} className='cursor-pointer'>About</a>
+          <a href="#package" onClick={() => setOpen(false)} className='cursor-pointer'>Package</a>
+          <a href="#galery" onClick={() => setOpen(false)} className='cursor-pointer'>Galery</a>
           {user ? (
             <div className='bg-cyan-500 p-2 rounded-md text-black'>
               <Link to="/profile" className='profile'>
@@ -98,8 +98,8 @@ const HomePage = () => {
             </div>
           ) : (
             <>
-            <a href="/" className='cursor-pointer'>Sign in</a>
-            <a href="/" className='cursor-pointer'>Sign Up</a>
+            <Link to="/login">  <a className='cursor-pointer'>Sign in</a></Link>
+            <Link to="/register"><a className='cursor-pointer'>Sign Up</a></Link>
             </>
           )}
          

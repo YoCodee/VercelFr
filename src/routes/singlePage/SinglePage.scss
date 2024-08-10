@@ -135,6 +135,10 @@
                 align-items: center;
                 gap: 10px;
 
+                @include md{
+                   gap: 1px;
+                }
+
                 img{
                     background-color: rgba(254, 185, 81, 0.209);
                 }
@@ -142,9 +146,17 @@
                 .featureText{
                     span{
                         font-weight: bold;
+
+                        @include md{
+                            font-size: 12px;
+                        }
                     }
                     p{
                         font-size: 14px;
+
+                        @include md{
+                            font-size: 12px;
+                        }
                     }
                 }
             }

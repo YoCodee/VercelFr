@@ -110,7 +110,7 @@ function AddBooking() {
                             <input id="totalDays" name="totalDays" type="number" value={TotalDays} onChange={(e) => setTotalDays(e.target.value)} />
                         </div>
                         <div className="item">
-                            <label htmlFor="bookingDate">Booking Date</label>
+                            <label htmlFor="bookingDate">Booking</label>
                             <input id="bookingDate" name="bookingDate" type="date" value={visitDate} onChange={(e) => setVisitDate(e.target.value)} />
                         </div>
                         <div className="item">
@@ -131,7 +131,7 @@ function AddBooking() {
                     </form>
                 </div>
             </div>
-            <div className="chatContainer">
+            <div className="chatContainer hidden md:flex">
                 <section className="section pt-48 px-3 flex flex-col justify-center">
                     <div className="grid grid-cols-2 gap-10 max-w-7xl mx-auto">
                         <div className="dalem -mt-32 flex justify-end relative">
