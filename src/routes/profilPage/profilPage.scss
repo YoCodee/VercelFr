@@ -3,6 +3,7 @@
 .profilPage{
     display: flex;
     height: 100%;
+ 
 
     @include md{
         flex-direction: column;
@@ -11,7 +12,7 @@
 
     .details{
         flex: 3;
-       overflow-y: auto;
+       overflow-y: hidden;
        padding-bottom: 50px;
 
        @include md{

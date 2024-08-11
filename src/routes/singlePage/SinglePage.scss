@@ -3,6 +3,7 @@
 .singlePage{
     display: flex;
     height: 100%;
+    overflow: hidden;
 
     @include sm{
         padding-right: 16px;

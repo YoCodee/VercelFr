@@ -15,6 +15,10 @@ function NewPostPage() {
   const {user} = useSelector((state)=> state.auth)
 
 
+  const handleDelete = (index) => {
+    setImages(prevImages => prevImages.filter((_, i) => i !== index));
+  };
+
   const handleSubmit = async (e) => {
     e.preventDefault();
     const formData = new FormData(e.target);
@@ -79,7 +83,11 @@ function NewPostPage() {
       </div>
       <div className="sideContainer">
         {images.map((image, index) => (
-          <img src={image} key={index} alt="" />
+          <div className="wrapperimage" key={index}>
+             <img src={image}  alt="" />
+             <button onClick={() => handleDelete(index)}>Delete</button>
+          </div>
+        
         ))}
         <UploadWidget
           uwConfig={{

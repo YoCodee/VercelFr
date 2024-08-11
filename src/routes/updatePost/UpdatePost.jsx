@@ -60,6 +60,10 @@ function UpdatePost() {
         }
     };
 
+    const handleDelete = (index) => {
+        setImages(prevImages => prevImages.filter((_, i) => i !== index));
+    };
+
     return (
         <div className="newPostPage pl-8">
             <div className="formContainer mt-4">
@@ -143,7 +147,10 @@ function UpdatePost() {
             <div className="sideContainer">
             {images && images.length > 0 ? (
                     images.map((image, index) => (
-                        <img src={image} key={index} alt="" />
+                        <div className="wrapperimage" key={index}>
+                        <img src={image}alt="" />
+                            <button onClick={() => handleDelete(index)}>Delete</button>
+                        </div>
                     ))
                 ) : (
                     <p>No images available</p>
